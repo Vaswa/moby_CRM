@@ -1,0 +1,179 @@
+ <script src="js/include.html" type="text/javascript"></script>
+ <link rel="shortcut icon" href="Images/favicon.html"/>
+ <script src="js/jquery.prettyPhoto.html" type="text/javascript"></script> 
+ <script src="js/portfolio.html" type="text/javascript"></script> 
+  <script language="JavaScript">
+  function fn_getPagename(){
+	var sPath=window.location.pathname;
+	var sPage = sPath.substring(sPath.lastIndexOf('../index-2.html') + 1);
+	return sPage;
+  }
+	var selectedPage = "current-menu-item";
+
+	if(fn_getPagename() == "index.html" || fn_getPagename() == "") {
+	  jQuery("#link1").addClass(selectedPage);
+	} else if (fn_getPagename() == "about.html"){
+      jQuery("#link2").addClass(selectedPage);
+	} else if (fn_getPagename() == "CrmSoftware.html"){
+      jQuery("#link3").addClass(selectedPage);
+	} else if (fn_getPagename() == "CrmProgram.html"){
+      jQuery("#link4").addClass(selectedPage);
+	} else if (fn_getPagename() == "CrmManagement.html"){
+      jQuery("#link7").addClass(selectedPage);
+	} else if (fn_getPagename() == "Pricing.html"){
+      jQuery("#link6").addClass(selectedPage);
+	} else if (fn_getPagename() == "Reseller.aspx"){
+      jQuery("#link5").addClass(selectedPage);
+	}  else if (fn_getPagename() == "Contactus.aspx"){
+      jQuery("#link8").addClass(selectedPage);
+	  jQuery("#sideBar1").hide();
+	  jQuery("#sideBar2").show();
+	} 
+
+
+	jQuery('#openLogin').click(function() {       
+       var slideToggle = this;
+		if (jQuery('#load-login').is(':visible')) {
+			jQuery('#load-login').slideUp(function() {
+				jQuery(slideToggle).removeClass('loginActive'); 
+			}); 
+		 }
+		else {
+		    jQuery("#load-login").load("index.aspx");
+			jQuery('#load-login').slideDown();
+			jQuery(slideToggle).addClass('loginActive'); 
+		}
+});
+
+
+</script>
+ <!-- #header-wrapper start -->
+        <section class="clearfix" id="header-wrapper">
+            <!-- #header start -->
+            <header class="clearfix" id="header">
+
+                <!-- #logo start -->
+                <section id="logo">
+                    <a href="index.html">
+                        <img alt="logo" src="img/logo.png" width="147" height="35" />
+                    </a>
+                </section><!-- #logo end -->
+                 <section id="so-links">
+				    <div class="fb-like" data-href="http://www.mobycrm.com/" data-send="true" data-layout="button_count" data-width="150" data-show-faces="true" style="float: left;width: 150px;"></div>
+					  <div id="fb-root"></div>
+					<script>(function(d, s, id) {
+					  var js, fjs = d.getElementsByTagName(s)[0];
+					  if (d.getElementById(id)) return;
+					  js = d.createElement(s); js.id = id;
+					  js.src = "../en_US/all.js#xfbml=1";
+					  fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));</script>
+					 <div class="g-plusone" data-size="medium" data-href="http://www.mobycrm.com/"></div>
+					<script type="text/javascript">
+					  (function() {
+						var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+						po.src = '../js/plusone.js';
+						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+					  })();
+					</script> 
+					<div class="clearfix"></div>
+				 </section>
+                <!-- contact-info-container -->              
+            </header><!-- #header end -->
+
+            <!-- #nav-container start -->
+            <section id="nav-container">
+
+                <section class="container_12">
+                    <section class="grid_12">
+                        <!-- #nav start -->
+                        <nav id="nav">
+                            <ul style="display: none;">
+                                <li id="link1" onclick="location.href='index.html'">
+                                    <span class="nav-icon icon-home"></span>
+                                    <a>Home</a>
+                                </li>
+
+                                <li id="link2" onclick="location.href='about.html'">
+                                    <span class="nav-icon icon-user"></span>
+                                    <a>About us</a>                                   
+                                </li>
+
+                                <li id="link3" onclick="location.href='CrmSoftware.html'">
+                                    <span class="nav-icon icon-cogs"></span>
+                                    <a>Features</a>                                   
+                                </li>
+
+                                <li id="link4" onclick="location.href='CrmProgram.html'">
+                                    <span class="nav-icon icon-puzzle-piece"></span>
+                                    <a>How to use</a>                                    
+                                </li>
+
+                                <li id="link5" onclick="location.href='Reseller.html'">
+                                    <span class="nav-icon icon-list"></span>
+                                    <a>Resellers</a>
+                                </li>
+                                
+								<li id="link6" onclick="location.href='Pricing-2.html'">
+                                    <span class="nav-icon icon-tag"></span>
+                                    <a>Pricing</a>
+                                </li>
+
+								<li id="link7" onclick="location.href='CrmManagement.html'">
+                                    <span class="nav-icon icon-question"></span>
+                                    <a>FAQs</a>
+                                </li>                                 
+
+                                <li id="link8" onclick="location.href='Contactus.html'">
+                                    <span class="nav-icon icon-map-marker"></span>
+                                    <a>Contact</a>
+                                </li>								
+                            </ul>
+                        </nav><!-- #nav end -->
+
+                        <!-- responsive navigation start -->
+                        <select id="nav-responsive">
+                            <option value="" selected="">Site Navigation...</option>   
+                            <option value="about.html">About us</option>                            
+                            <option value="CrmSoftware.html">Features</option>                            
+                            <option value="CrmProgram.html">How to use</option>                            
+                            <option value="Reseller.aspx">Reseller</option>                            
+                            <option value="Pricing.html">Pricing</option>                            
+                            <option value="CrmManagement.html">FAQs</option>                            
+                            <option value="Contactus.aspx">Contact</option>                            
+                        </select><!-- responsive navigation end -->
+
+						  <section id="contact-info-container">
+									<div class="loginbtn">
+									   <a data-gal="prettyPhoto[ajax]" href="loginPopup7f03.html" class="btn-medium red" >
+											   <span>LOGIN</span>
+									   </a>
+										&nbsp;&nbsp;
+									   <a href="Registration.html" class="btn-medium white" id="btnRegister">
+											   <span>REGISTER</span>
+									   </a>
+									</div>
+									
+									<div class="clearfix"></div>
+
+
+									
+									<div class="login_screen" id="load-login" style="display:none;"> </div>
+
+									
+								</section><!-- .contact-info-container end -->
+
+                        <!-- <section id="search-box">
+                            <form method="get" action="#">
+                                <input type="text" placeholder="Type and hit enter..." name="s" id="m_search" />
+                                <input type="submit" class="search-submit" />
+                            </form>
+                        </section> -->
+                    </section><!-- .grid_12 end -->
+                </section><!-- .container_12 end -->
+
+            </section><!-- #nav-container end -->
+        </section><!-- 3header-wrapper end -->
+
+        <!-- .top-shadow -->
+        <div class="top-shadow"></div>
