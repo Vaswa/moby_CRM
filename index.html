@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>Mobile CRM, CRM management are based on Mobile and Web</title>
+        <meta content="Mobile CRM, CRM management are based on Mobile and Web platforms and customers can derive effective management processes and cost effective solutions with MobyCRM your one stop solution" name="description"> 
+        <meta content="Mobile CRM" name="author">
+        <meta content="initial-scale=1, maximum-scale=1, width=device-width" name="viewport">
+        <link href="css/basic.css" rel="stylesheet">
+        <link href="css/frontend.css" rel="stylesheet">   
+        <link href="css/responsive.css" rel="stylesheet">  
+        <link href="css/red.css" rel="stylesheet">
+        <link media="screen" href="css/prettyPhoto.css" rel="stylesheet">
+        <link media="screen" href="css/settings.css" type="text/css" rel="stylesheet">
+        <link media="screen" href="css/revolution.css" type="text/css" rel="stylesheet">      
+        <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic">        
+        <link href="css/style1.css" rel="stylesheet">
+        <link href="css/font-awesome.css" rel="stylesheet"> 
+		<script src="js/jquery-1.8.3.js" type="text/javascript"></script>
+        <script src="js/jquery.placeholder.min.js" type="text/javascript"></script>
+        <script src="js/jquery.carouFredSel-6.0.0-packed.js" type="text/javascript"></script>
+        <script src="js/jquery.touchSwipe-1.2.5.js" type="text/javascript"></script>        
+        <script src="js/jquery.themepunch.plugins.min.js" type="text/javascript"></script>
+        <script src="js/jquery.themepunch.revolution.min.js" type="text/javascript"></script>
+		<script src="js/validation.js" type="text/javascript"></script>		
+		
+		<!--<script type="text/javascript">
+
+			window.location="dev/index.html"
+
+		</script>-->
+		
+		<script type="text/javascript">
+			function validat() {  			
+				if (!(validEmail(getObj("txtloginemail"), "Enter Email id")))
+					return false; 
+				if(document.getElementById("txtloginpwd").value=="")
+				{
+					alert("Enter Password");
+					document.getElementById("txtloginpwd").focus();
+					return false;
+				}
+							  
+			}
+
+	  function fnvalidepwd() {            
+            if (!(validEmail(getObj("txtemail"), "Enter Email id")))
+                return false;           
+        }
+       
+
+	   function fn_showSec(sec) {
+		   if(sec=='pwd') {
+			  $("#idloginSec").hide();
+			  $("#idforgotPwd").show();
+		   } else {
+		      $("#idloginSec").show();
+			  $("#idforgotPwd").hide();
+		   }
+	   }
+
+
+	   function getUrlVars() {
+			var vars = {};
+			var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+				vars[key] = value;
+			});
+			return vars;
+	  }
+
+	    var msgTimeOut=0;
+		function fnShowMsg(msg){
+			clearTimeout(msgTimeOut);
+			$('#top_err_msg').html('<span>'+msg+'</span>');
+			$('#top_err_msg').slideDown(300);
+			msgTimeOut=setTimeout("$(\'#top_err_msg\').slideUp(\'slow\')",5000);
+		}
+		
+
+		</script>
+
+        <script type="text/javascript">
+		$(document).ready(function() {
+		   var r1h = $('#row1 .description')[0].scrollHeight;
+		   var r2h = $('#row2 .description')[0].scrollHeight;
+		   var r3h = $('#row3 .description')[0].scrollHeight;
+
+
+			$('.row1').click(function(e) {
+				e.stopPropagation();
+				$('#row1 .description').animate({
+					'height': r1h
+				})
+			});
+
+			$('.row2').click(function(e) {
+				e.stopPropagation();
+				$('#row2 .description').animate({
+					'height': r2h
+				})
+			});
+
+			$('.row3').click(function(e) {
+				e.stopPropagation();
+				$('#row3 .description').animate({
+					'height': r3h
+				})
+			});
+
+		var msg = getUrlVars()["flag"];
+			switch(msg)
+			 {
+				case "notRegistered":fnShowMsg("Your are not a registered user. Please register.");
+				break;
+				case "failed":fnShowMsg("Login failed. Please check your password.");
+				break;
+				case "notActivated":fnShowMsg("Your are registered but not verified your account.");
+				break;
+			 }
+		  // if (msg == 'notRegistered') {
+		//	 fnShowMsg("Your are not a registered user. Please register.");			
+		//   } 	else if(msg=='failed') {
+		//      fnShowMsg("Login failed. Please check your password.");			
+		//   }
+
+
+       });
+
+		$(document).click(function() {
+				$('#row1 .description,#row2 .description, #row3 .description').animate({
+					'height': '80px'
+				})	 
+		 
+		 })
+
+		</script>
+    </head>
+
+    <body>
+         <div id="top_err_msg" class="errorMsg"></div>  
+        <div id="load-header"></div>
+
+        <!-- .rs-wrapper start -->
+        <div class="rs-wrapper">
+
+            <div class="fullwidthbanner-container">
+
+                <div class="fullwidthbanner">
+                    <ul>
+
+                        <li data-transition="slotzoom-horizontal" data-slotamount="15">
+                            <img src="img/header1.jpg" width="1920" height="413" alt="Header">
+                            <div class="caption lfl regular_title"  data-x="28" data-y="90" data-speed="700" data-start="2000" data-easing="easeOutBack">No Hardware / Software</div>
+                            <div class="caption lfr regular_subtitle"  data-x="80" data-y="160" data-speed="700" data-start="2400" data-easing="easeOutBack"><b>Easy to use</b></div> 
+                            <div class="caption lfr regular_subtitle"  data-x="80" data-y="202" data-speed="700" data-start="2900" data-easing="easeOutBack"><b>Browser based and hosted solution</b></div>
+                            <div class="caption lfr regular_subtitle"  data-x="80" data-y="242" data-speed="700" data-start="3200" data-easing="easeOutBack"> <b>No maintenance required</b></div>
+							 <div class="caption lfr regular_subtitle"  data-x="80" data-y="282" data-speed="700" data-start="3500" data-easing="easeOutBack"><b>Pay as you go</b></div>
+                        </li>
+
+                        <li data-transition="3dcurtain-vertical" data-slotamount="10">
+                            <img src="img/header2.jpg" width="1920" height="413" alt="background">
+                            <div class="caption lfl regular_title2"  data-x="38" data-y="90" data-speed="700" data-start="2000" data-easing="easeOutBack"><b>Best CRM for People on Move</b></div>
+                            <div class="caption lfr regular_subtitle"  data-x="90" data-y="160" data-speed="700" data-start="2400" data-easing="easeOutBack"> <b>No upfront investment</b></div> 
+                            <div class="caption lfr regular_subtitle"  data-x="90" data-y="202" data-speed="700" data-start="2900" data-easing="easeOutBack"><b>User-friendly CRM</b></div>
+                            <div class="caption lfr regular_subtitle"  data-x="90" data-y="242" data-speed="700" data-start="3200" data-easing="easeOutBack"><b>Data Security Management</b></div>
+                        </li>
+
+                        <li data-transition="3dcurtain-horizontal" data-slotamount="10">
+                            <img src="img/header3.jpg" width="1920" height="413" alt="background">
+                            <div class="caption lfl regular_title3"  data-x="58" data-y="90" data-speed="700" data-start="2000" data-easing="easeOutBack">Mobile CRM Management</div>
+                            <div class="caption lfr regular_subtitle"  data-x="120" data-y="160" data-speed="700" data-start="2400" data-easing="easeOutBack"><b>Best solution for travelling / field people</b></div> 
+                            <div class="caption lfr regular_subtitle"  data-x="120" data-y="202" data-speed="700" data-start="2900" data-easing="easeOutBack"><b>Works on Android, iOS & Windows</b></div>
+                            <div class="caption lfr regular_subtitle"  data-x="120" data-y="242" data-speed="700" data-start="3200" data-easing="easeOutBack"><b>Best suits for SME segment</b></div>
+							<div class="caption lfr regular_subtitle"  data-x="120" data-y="282" data-speed="700" data-start="3500" data-easing="easeOutBack"><b>Industry low monthly subscription fee</b></div>
+                        </li>
+						
+						<li data-transition="3dcurtain-vertical" data-slotamount="10">
+                            <img src="img/header4.jpg" width="1920" height="413" alt="background">
+                            <div class="caption lfl regular_title2"  data-x="10" data-y="90" data-speed="700" data-start="2000" data-easing="easeOutBack">Efficient Lead & Call Planner</div>
+                            <div class="caption lfr regular_subtitle"  data-x="50" data-y="160" data-speed="700" data-start="2400" data-easing="easeOutBack"> <b>Multichannel Lead Management</b></div> 
+                            <div class="caption lfr regular_subtitle"  data-x="50" data-y="202" data-speed="700" data-start="2900" data-easing="easeOutBack"><b>Robust & Innovative Functionality</b></div>
+                            <div class="caption lfr regular_subtitle"  data-x="50" data-y="242" data-speed="700" data-start="3200" data-easing="easeOutBack"><b>Works with other enterprize solutions</b></div>
+							<div class="caption lfr regular_subtitle"  data-x="50" data-y="282" data-speed="700" data-start="3500" data-easing="easeOutBack"><b>Easy integration with 3rd Party applications</b></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- .rs-wrapper end -->
+
+        <!-- #content-wrapper start -->
+        <section id="content-wrapper">
+
+            <!-- .container_12 start -->
+            <div class="container_12">
+                <!-- .grid_12 start -->
+                <article class="grid_12">
+
+                    <!-- .entry-note start -->
+                    <section class="entry-note">
+                        <h1>Welcome to <span class="text-color">MobyCRM</span>. Business Efficiency Like Never Before.</h1>
+
+						
+                        <p>
+                            MobyCRM can be accessed anywhere with a mobile device and internet connection, MobyCRM is a hosted application, for which you will never have to download or install anything to have access to your data, to manage your field staff.
+                        </p><br>
+						<p>
+						  Our well designed and managed CRM (Client Relation Management) has the ability to provide upcoming followups, daily call planner, call escalation, phone call logs, predict trends, stay in touch with customers, multichannel marketing through SMS & Email, manage call center activity, track marketing people and field service executives.   
+						</p>  
+                    </section><!-- entry-note end -->
+                </article><!-- .grid_12 end -->
+
+                <!-- .grid_4 start -->
+                <article class="grid_4">
+                    <div class="service-box-2-container">
+                        <div class="icon">
+                            <i class="icon-desktop"></i>
+                        </div>
+
+                        <section class="service-box-2">
+                            <div class="title">
+                                <a href="#">
+                                    <h3>MobyCRM<sup>&trade;</sup></h3>
+                                </a>
+                                <span></span>
+                            </div>
+
+                            <div class="description">
+                                <p>
+                                    MobyCRM<sup>&trade;</sup> is a new generation (patent-pending) CRM application for the field staff to enter the customer information, and create database of the prospective clients. The application works from mobile phones and relives from the constrains of desktop / laptop.
+                                </p>
+                            </div>
+
+                            <div class="read-more-btn" style="float:left;margin:11px 12px 0 0;">
+                                <a href="#">Download App</a>
+                                <span class="plus"><i class="icon-download-alt"></i></span>
+                            </div>
+							<div class="apps_moby">
+							<ul class="block">
+							  	
+							  	<li><a  class="apple" href="https://itunes.apple.com/in/app/mobycrm/id611683351?mt=8" target="_blank"></a></li>
+							  	<li><a  class="androidfinal" href="https://play.google.com/store/search?q=MobyCRM" target="_blank" ></a></li>
+							  	<li><a  class="download" href="http://www.windowsphone.com/en-us/store/app/mobycrm/1de53002-e479-49b1-a9c8-fde41b4ce702" target="_blank"></a></li>
+							</ul>
+							</div>
+                        </section><!-- .service-box-2 end -->
+                    </div>
+
+                </article><!-- .grid_4 end -->
+
+                <!-- .grid_4 start -->
+                <article class="grid_4">
+                    <div class="service-box-2-container">
+                        <div class="icon">
+                            <i class="icon-cogs"></i>
+                        </div>
+
+                        <section class="service-box-2">
+                            <div class="title">
+                                <a href="#">
+                                    <h3>Moby Services</h3>
+                                </a>
+                                
+                            </div>
+
+                            <div class="description">
+                                <p>MobyService helps you to improve Equipment Uptime, Service Efficiency & Service Sales.</p>
+								<p>In ever growing competition, you have to focus more on improving the efficieny & world class service. We cannot compromise on service experience, which can cost us the customer. You have to deploy proven processes in place to avoid service level problems, which should be planned proactively and very carefully.</p>
+                            </div>
+
+                            <div class="read-more-btn left_margin">
+                                <a href="http://www.mobyservices.com/" target="_blank">Download App</a>
+                                <span class="plus"><i class="icon-download-alt"></i></span>
+                            </div>
+
+                        </section><!-- .service-box-2 end -->
+                    </div>
+
+                </article><!-- .grid_4 end -->
+
+                <!-- .grid_4 start -->
+                <article class="grid_4">
+                    <div class="service-box-2-container">
+                        <div class="icon">
+                            <i class="icon-group"></i>
+                        </div>
+
+                        <section class="service-box-2">
+                            <div class="title">
+                                <a href="#">
+                                    <h3>Salient Features</h3>
+                                </a>
+                                
+                            </div>
+
+                            <div class="description">
+                                <p>
+                                   Our servers are hosted in Secure data centres. In addition, information that passes between your computer and our servers is encrypted using a technology called SSL which is the same technology that banks use to protect data.
+                                </p>
+                            </div>
+
+                            <!--<div class="read-more-btn">
+                                <a href="#">Read More</a>
+                                <span class="plus">+</span>
+                            </div>-->
+
+                        </section><!-- .service-box-2 end -->
+                    </div>
+                </article><!-- .grid_4 end -->
+
+                <div class="clearfix"></div>
+
+                <!-- .grid_12 carousel-portfolio end -->
+                <article class="grid_12 carousel-portfolio">
+
+                    <section class="section-title center">
+                        <div class="title-container">
+                            <section class="title">
+                                <h2>MobyCRM At a Glance</h2>
+                                <span>Some Key Screenshots of Application</span>
+                            </section>
+                        </div>
+                    </section><!-- .section-title .center end -->
+
+                    <ul id="foo2" class="carousel-li">
+                        <li class="portfolio-style-2">
+                            <figure class="portfolio clearfix">
+                                <div class="portfolio-image">
+                                    <a href="#">
+                                        <img src="img/portfolio/thumb/Business.jpg" width="218" height="171" alt="Business"/>
+                                    </a>
+
+                                    <div class="portfolio-hover">
+                                        <div class="mask"></div>
+                                        <ul>
+                                            <li class="portfolio-zoom">
+                                                <a href="img/portfolio/1col/1.png" 
+                                                   data-gal="prettyPhoto[pp_gallery]">zoom
+                                                </a>
+                                            </li>
+
+                                            <!-- <li class="portfolio-single">
+                                                <a href="#">single</a>
+                                            </li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <figcaption>
+                                    <a class="title">Business at a Glance</a>
+                                    <span class="subtitle">View various stages of leads<br><br></span>
+                                </figcaption>
+                            </figure>
+                        </li><!-- portfolio-style-2 end -->
+
+                         <li class="portfolio-style-2">
+                            <figure class="portfolio clearfix">
+                                <div class="portfolio-image">
+                                    <a href="#">
+                                        <img src="img/portfolio/thumb/call-planner.jpg" width="218" height="171" alt="Call"/>
+                                    </a>
+
+                                    <div class="portfolio-hover">
+                                        <div class="mask"></div>
+                                        <ul>
+                                            <li class="portfolio-zoom">
+                                                <a href="img/portfolio/1col/4.png" 
+                                                   data-gal="prettyPhoto[pp_gallery]">zoom
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <figcaption>
+                                    <a class="title">Effective sales call planner</a>
+                                    <span class="subtitle">Track new / old follow ups effectively<br><br></span>
+                                </figcaption>
+                            </figure>
+                        </li><!-- portfolio-style-2 end -->
+
+                        <li class="portfolio-style-2">
+                            <figure class="portfolio clearfix">
+                                <div class="portfolio-image">
+                                    <a href="#">
+                                        <img src="img/portfolio/thumb/Contact.jpg" width="218" height="171" alt="Contact"/>
+                                    </a>
+
+                                    <div class="portfolio-hover">
+                                        <div class="mask"></div>
+                                        <ul>
+                                            <li class="portfolio-zoom">
+                                                <a href="img/portfolio/1col/3.png" 
+                                                   data-gal="prettyPhoto[pp_gallery]">zoom
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <figcaption>
+                                    <a class="title">Contact management</a>
+                                    <span class="subtitle">Import export contacts at admin level<br><br></span>
+                                </figcaption>
+                            </figure>
+                        </li><!-- portfolio-style-2 end -->
+
+						 <li class="portfolio-style-2">
+                            <figure class="portfolio clearfix">
+                                <div class="portfolio-image">
+                                    <a href="#">
+                                        <img src="img/portfolio/thumb/locate.jpg" width="218" height="171" alt="Locate"/>
+                                    </a>
+
+                                    <div class="portfolio-hover">
+                                        <div class="mask"></div>
+                                        <ul>
+                                            <li class="portfolio-zoom">
+                                                <a href="img/portfolio/1col/14.png" 
+                                                   data-gal="prettyPhoto[pp_gallery]">zoom
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <figcaption>
+                                    <a class="title">Locate your field staff</a>
+                                    <span class="subtitle">En-route / Re-route staff on the move<br><br></span>
+                                </figcaption>
+                            </figure>
+                        </li><!-- portfolio-style-2 end -->
+                       
+
+                        <li class="portfolio-style-2"  data-alpha="webdesign">
+                            <figure class="portfolio clearfix">
+                                <div class="portfolio-image">
+                                    <a href="#">
+                                        <img src="img/portfolio/thumb/Social-media.jpg" width="218" height="171" alt="Social"/>
+                                    </a>
+
+                                    <div class="portfolio-hover">
+                                        <div class="mask"></div>
+                                        <ul>
+                                            <li class="portfolio-zoom">
+                                                <a href="img/portfolio/1col/5.png" 
+                                                   data-gal="prettyPhoto[pp_gallery]">zoom
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <figcaption>
+                                    <a class="title">Social media integration</a>
+                                    <span class="subtitle">Know your customer on social media<br><br></span>
+                                </figcaption>
+                            </figure>
+                        </li><!-- portfolio-style-2 end -->
+
+                        <li class="portfolio-style-2">
+                            <figure class="portfolio clearfix">
+                                <div class="portfolio-image">
+                                    <a href="#">
+                                        <img src="img/portfolio/thumb/Customer-History.jpg" width="218" height="171" alt="Customer"/>
+                                    </a>
+
+                                    <div class="portfolio-hover">
+                                        <div class="mask"></div>
+                                        <ul>
+                                            <li class="portfolio-zoom">
+                                                <a href="img/portfolio/1col/6.png" 
+                                                   data-gal="prettyPhoto[pp_gallery]">zoom
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <figcaption>
+                                    <a class="title">Customer history</a>
+                                    <span class="subtitle">Record every interaction (eMail, Messages and Mobile)</span>
+                                </figcaption>
+                            </figure>
+                        </li><!-- portfolio-style-2 end -->
+
+                        <li class="portfolio-style-2">
+                            <figure class="portfolio clearfix">
+                                <div class="portfolio-image">
+                                    <a href="#">
+                                        <img src="img/portfolio/thumb/DIY-Form.jpg" width="218" height="171" alt="DIY"/>
+                                    </a>
+
+                                    <div class="portfolio-hover">
+                                        <div class="mask"></div>
+                                        <ul>
+                                            <li class="portfolio-zoom">
+                                                <a href="img/portfolio/1col/7.png" 
+                                                   data-gal="prettyPhoto[pp_gallery]">zoom
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <figcaption>
+                                    <a class="title">DIY forms</a>
+                                    <span class="subtitle">Design forms as your require(Do It Yourself)</span>
+                                </figcaption>
+                            </figure>
+                        </li><!-- portfolio-style-2 end -->
+
+                        <li class="portfolio-style-2"  data-alpha="graphicdesign">
+                            <figure class="portfolio clearfix">
+                                <div class="portfolio-image">
+                                    <a href="#">
+                                        <img src="img/portfolio/thumb/Lead-management.jpg" width="218" height="171" alt="Lead"/>
+                                    </a>
+
+                                    <div class="portfolio-hover">
+                                        <div class="mask"></div>
+                                        <ul>
+                                            <li class="portfolio-zoom">
+                                                <a href="img/portfolio/1col/8.png" 
+                                                   data-gal="prettyPhoto[pp_gallery]">zoom
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <figcaption>
+                                    <a class="title">Lead Management</a>
+                                    <span class="subtitle">Track all your leads in one location<br><br></span>
+                                </figcaption>
+                            </figure>
+                        </li><!-- portfolio-style-2 end -->
+						 <li class="portfolio-style-2">
+                            <figure class="portfolio clearfix">
+                                <div class="portfolio-image">
+                                    <a href="#">
+                                        <img src="img/portfolio/thumb/use-mobile-app.jpg" width="218" height="171" alt="Mobile"/>
+                                    </a>
+
+                                    <div class="portfolio-hover">
+                                        <div class="mask"></div>
+                                        <ul>
+                                            <li class="portfolio-zoom">
+                                                <a href="img/portfolio/1col/9.png" 
+                                                   data-gal="prettyPhoto[pp_gallery]">zoom
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <figcaption>
+                                    <a class="title">Easy to use Mobile Apps</a>
+                                    <span class="subtitle">Android & iOS<br><br></span>
+                                </figcaption>
+                            </figure>
+                        </li><!-- portfolio-style-2 end -->
+						 <li class="portfolio-style-2">
+                            <figure class="portfolio clearfix">
+                                <div class="portfolio-image">
+                                    <a href="#">
+                                        <img src="img/portfolio/thumb/Dialy-Activity-Report%27.jpg" width="218" height="171" alt="Activity"/>
+                                    </a>
+
+                                    <div class="portfolio-hover">
+                                        <div class="mask"></div>
+                                        <ul>
+                                            <li class="portfolio-zoom">
+                                                <a href="img/portfolio/1col/10.png" 
+                                                   data-gal="prettyPhoto[pp_gallery]">zoom
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <figcaption>
+                                    <a class="title">Daily Activity Report</a>
+                                    <span class="subtitle">Genarate DAR / DSR reports on the fly<br><br></span>
+                                </figcaption>
+                            </figure>
+                        </li><!-- portfolio-style-2 end -->
+						 <li class="portfolio-style-2">
+                            <figure class="portfolio clearfix">
+                                <div class="portfolio-image">
+                                    <a href="#">
+                                        <img src="img/portfolio/thumb/account.jpg"  width="218" height="171" alt="Account"/>
+                                    </a>
+
+                                    <div class="portfolio-hover">
+                                        <div class="mask"></div>
+                                        <ul>
+                                            <li class="portfolio-zoom">
+                                                <a href="img/portfolio/1col/11.png" 
+                                                   data-gal="prettyPhoto[pp_gallery]">zoom
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <figcaption>
+                                    <a class="title">Accounts Management</a>
+                                    <span class="subtitle">Estimates,Proforrma Invoice, Delivary Challans & Invoices</span>
+                                </figcaption>
+                            </figure>
+                        </li><!-- portfolio-style-2 end -->
+						 <li class="portfolio-style-2">
+                            <figure class="portfolio clearfix">
+                                <div class="portfolio-image">
+                                    <a href="#">
+                                        <img src="img/portfolio/thumb/Tax.jpg" width="218" height="171" alt="Tax"/>
+                                    </a>
+
+                                    <div class="portfolio-hover">
+                                        <div class="mask"></div>
+                                        <ul>
+                                            <li class="portfolio-zoom">
+                                                <a href="img/portfolio/1col/12.png" 
+                                                   data-gal="prettyPhoto[pp_gallery]">zoom
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <figcaption>
+                                    <a class="title">Tax reports</a>
+                                    <span class="subtitle">Various tax reports<br><br></span>
+                                </figcaption>
+                            </figure>
+                        </li><!-- portfolio-style-2 end -->
+						 <li class="portfolio-style-2">
+                            <figure class="portfolio clearfix">
+                                <div class="portfolio-image">
+                                    <a href="#">
+                                        <img src="img/portfolio/thumb/email.jpg" width="218" height="171" alt="portfolio"/>
+                                    </a>
+
+                                    <div class="portfolio-hover">
+                                        <div class="mask"></div>
+                                        <ul>
+                                            <li class="portfolio-zoom">
+                                                <a href="img/portfolio/1col/13.png" 
+                                                   data-gal="prettyPhoto[pp_gallery]">zoom
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <figcaption>
+                                    <a class="title">IMAP Based eMail integration</a>
+                                    <span class="subtitle">Send / Receive eMails with IMAP and configure BCC to respective manager</span>
+                                </figcaption>
+                            </figure>
+                        </li><!-- portfolio-style-2 end -->
+                    </ul><!-- .carousel-li end -->
+
+                    <div class="clearfix"></div>
+
+                    <div class="carousel-pagination" id="foo2_pag"></div>
+
+                </article><!-- .grid_12 carousel-portfolio end -->
+
+                <article id="shortDesc">
+                    <!-- .section-title .center start -->
+                    <section class="section-title center">
+                        <!-- .ttile-container .carousel start -->
+                        <div class="title-container">
+                            <section class="title">
+                                <h2>Why MobyCRM<sup>&trade;</sup></h2>
+                                
+                            </section>
+                        </div><!-- .title-container .carousel end -->                        
+                    </section><!-- .section-title .center end -->
+                    
+                    <div id="row1">
+					   <article class="grid_4">
+							<section class="service-box-1">
+								<div class="icon">
+									<i class="icon-random"></i>
+								</div>
+
+								<div class="content">
+									<div class="title">
+										<h6>Multichannel Lead Management</h6>										
+									</div>
+
+									<div class="description">
+										<p>As part of aggressive marketing efforts, we promote our products and services in multiple channels and in-bound leads are very valuable. None of us can ignore the leads. MobyCRM helps you to capture all kinds of leads into the system and make it available for the Management and in-turn it can be assigned to corresponding executives for the execution. MobyCRM also has a tracking system of the leads provided to the executive. This includes, enquiry form integration, Inbound call recording and tele marketing activities.<br /><br />The customer interactions are recorded for your reference in future, and your marketing staff are well-equipped with required information for their next interaction with customer.</p>
+									</div>
+									
+								</div><!-- .content end -->
+                                <div class="read-more-btn row1">
+									<a href="javascript:void(0)">Read more</a>
+									<span class="plus">+</span>
+                                 </div>
+							</section><!-- .service-box-1 end -->
+						</article>
+
+						<article class="grid_4">
+							<section class="service-box-1">
+								<div class="icon">
+									<i class="icon-qrcode"></i>
+								</div>
+
+								<div class="content">
+									<div class="title">
+										<h6>Robust Functionality</h6>										
+									</div>
+
+									<div class="description">
+										<p>If we say, MobyCRM is "User-Friendly" it would be an understatement. The intuitive web and mobile based interface are well designed and it is extremely easy to use.<br /><br />The rich functionality is well thought and purely object oriented, Lead Tracking, Field staff tracking, know about your customer through LinkedIn, sum-up the various forms of enquiries into single interface and review the lead-load balance, important reports (Daily Activity Report), Interact with external application, excel data exchange, timely reminders, easy to raise quotes, invoice and look at list of pending payment list, Upcoming list of appointments, SMS Marketing.</p>
+									</div>
+									
+								</div><!-- .content end -->
+                                <div class="read-more-btn row1">
+									<a href="javascript:void(0)">Read more</a>
+									<span class="plus">+</span>
+                                 </div>
+							</section><!-- .service-box-1 end -->
+						</article>                 
+
+                       <article class="grid_4">
+							<section class="service-box-1">
+								<div class="icon">
+									<i class="icon-rocket"></i>
+								</div>
+
+								<div class="content">
+									<div class="title">
+										<h6> Speed &amp; Adaptability</h6>										
+									</div>
+
+									<div class="description">
+										<p> At MobyCRM we strongly believing in adaptability, as our client's business grow, we also evolve and grow with you.<br /><br />You can quickly scale up or down your CRM as per your business demands without costly customization. As it is a hosted solution, the all the evolving features will be within your reach and you can derive the full benefit. User configuration is one of the simplest thing in MobyCRM, you can assign role based user rights from the setup screen and control the data sharing.</p>
+									</div>
+									
+								</div><!-- .content end -->
+                                <div class="read-more-btn row1">
+									<a href="javascript:void(0)">Read more</a>
+									<span class="plus">+</span>
+                                 </div>
+							</section><!-- .service-box-1 end -->
+						</article>
+
+                      <div class="clearfix"></div>
+                    </div>
+
+					<div id="row2">
+					   <article class="grid_4">
+							<section class="service-box-1">
+								<div class="icon">
+									<i class="icon-lightbulb"></i>
+								</div>
+
+								<div class="content">
+									<div class="title">
+										<h6> Continuous Innovation</h6>										
+									</div>
+
+									<div class="description">
+										<p>We Listen, Collaborate and Deliver<br /><br />MobyCRM firmly believes in the above, and we constantly in touch with our customers to understand ever changing business requirements and analyse them and see how best we can implement those to our customer to enhance their business efficiency and improve the top and bottom-line. As a part of the ongoing package, all customers can avail all new features. The updates happen automatically, behind-the-scenes, and as a user you can just turn-on the features that are right for you.</p>
+									</div>
+									
+								</div><!-- .content end -->
+                                <div class="read-more-btn row2">
+									<a href="javascript:void(0)">Read more</a>
+									<span class="plus">+</span>
+                                 </div>
+							</section><!-- .service-box-1 end -->
+						</article>
+
+						<article class="grid_4">
+							<section class="service-box-1">
+								<div class="icon">
+									<i class="icon-mobile-phone"></i>
+								</div>
+
+								<div class="content">
+									<div class="title">
+										<h6> Mobility</h6>										
+									</div>
+
+									<div class="description">
+										<p>We cannot use our business applications at our desk alone, we need a solution, which should go along. We understand this, and made MobyCRM available at leading mobile platforms like, iPhone, Android and BlackBerry. You can derive the same benefits as you get from your web / desktop application.</p>
+									</div>
+									
+								</div><!-- .content end -->
+                                <div class="read-more-btn row2">
+									<a href="javascript:void(0)">Read more</a>
+									<span class="plus">+</span>
+                                 </div>
+							</section><!-- .service-box-1 end -->
+						</article>
+
+						<article class="grid_4">
+							<section class="service-box-1">
+								<div class="icon">
+									<i class="icon-exchange"></i>
+								</div>
+
+								<div class="content">
+									<div class="title">
+										<h6> Extensibility</h6>										
+									</div>
+
+									<div class="description">
+										<p>Value for Money. MobyCRM is hosted solution, it delivers unparalleled scalability, flexibility and value. MobyCRM customers can get the maximum RoI (Return on Investment).</p>
+									</div>
+									
+								</div><!-- .content end -->
+                                <div class="read-more-btn row2">
+									<a href="javascript:void(0)">Read more</a>
+									<span class="plus">+</span>
+                                 </div>
+							</section><!-- .service-box-1 end -->
+						</article>
+                        <div class="clearfix"></div>
+					  </div>
+
+					  <div id="row3">
+                       <article class="grid_4">
+							<section class="service-box-1">
+								<div class="icon">
+									<i class="icon-coffee"></i>
+								</div>
+
+								<div class="content">
+									<div class="title">
+										<h6>Incredibly Easy to Use</h6>										
+									</div>
+
+									<div class="description">
+										<p>MobyCRM is a marketing and field force management software, which helps the management to track every lead and conversion of the same into sale. It is incredibly easy to use and features a dynamic mobile interface.</p>
+									</div>
+									
+								</div><!-- .content end -->
+                                <div class="read-more-btn row3">
+									<a href="javascript:void(0)">Read more</a>
+									<span class="plus">+</span>
+                                 </div>
+							</section><!-- .service-box-1 end -->
+						</article>
+
+						<article class="grid_4">
+							<section class="service-box-1">
+								<div class="icon">
+									<i class="icon-user"></i>
+								</div>
+
+								<div class="content">
+									<div class="title">
+										<h6>Free Account Setup</h6>										
+									</div>
+
+									<div class="description">
+										<p>Too busy, or concerned with the time involved to make the switch? No Problem - Our team is here to help! Account setup is free, completely confidential and painless.</p>
+									</div>
+									
+								</div><!-- .content end -->
+                                <div class="read-more-btn row3">
+									<a href="javascript:void(0)">Read more</a>
+									<span class="plus">+</span>
+                                 </div>
+							</section><!-- .service-box-1 end -->
+						</article>
+
+						<article class="grid_4">
+							<section class="service-box-1">
+								<div class="icon">
+									<i class="icon-puzzle-piece"></i>
+								</div>
+
+								<div class="content">
+									<div class="title">
+										<h6>Free Training</h6>										
+									</div>
+
+									<div class="description">
+										<p>Connect at anytime with a MobyCRM customer care agent for 1-on-1 training and assistance. You'll be on a successful path wizard in no time! (Did we mention that it's free?)</p>
+									</div>
+									
+								</div><!-- .content end -->
+                                <div class="read-more-btn row3">
+									<a href="javascript:void(0)">Read more</a>
+									<span class="plus">+</span>
+                                 </div>
+							</section><!-- .service-box-1 end -->
+						</article>
+
+
+                    <div class="clearfix"></div>
+                  </div>
+                   
+
+                   
+                </article><!-- .grid_12 end -->
+
+                <!-- .grid_8 start -->
+                <article class="grid_8" style="margin-top: 20px;">
+                    <!-- .section-title .center start -->
+                    <section class="section-title center">
+
+                        <!-- .ttile-container .carousel start -->
+                        <div class="title-container">
+                            <section class="title">
+                                <h2>MobyCRM<sup>&trade;</sup> in Action</h2>                                
+                            </section>
+                        </div><!-- .title-container .carousel end -->                        
+                    </section><!-- .section-title .center end -->
+
+                    <!-- .tabs start -->
+                    <ul class="grid_3 alpha tabs vertical">
+                        <li class="active">
+                            <a href="#tab1">
+                                <i class="icon-road"></i>
+                                On Field   
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tab2">
+                                <i class="icon-map-marker"></i>
+                                Locator
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tab3">
+                                <i class="icon-phone-sign"></i>
+                                Call Center
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#tab4">
+                                <i class="icon-th-large"></i>
+                                Office
+                            </a>
+                        </li>
+
+						 <li>
+                            <a href="#tab5">
+                                <i class="icon-laptop"></i>
+                                Application
+                            </a>
+                        </li>
+                    </ul><!-- .tabs end -->
+
+                    <!-- .tabs-content-wrap vertical start -->
+                    <section class="grid_5 omega tab-content-wrap vertical">
+
+                        <!-- #tab1 content start -->
+                        <div class="tab-content" id="tab1" style="display: block;">
+                            <img alt="image" class="float-left" src="img/about/on-field.png" width="163" height="112">
+
+                            <p>
+                                Your Marketing Representatives / Sales Executives can take the calls and instantly can update the MobyCRM application, without getting	back to a desktop or laptop and corresponding follow-up can be set immediately.
+                            </p>
+
+							<div class="read-more-btn">							    
+								<a href="img/first5841.swf?width=635&amp;height=383"  data-gal="prettyPhoto[flash]" >View Demo</a>
+								<span class="plus"><i class="icon-facetime-video"></i></span>
+							 </div>
+
+                        </div><!-- #tab1 content end -->
+
+                        <!-- tab2 content start -->
+                        <div class="tab-content" id="tab2" style="display: none;">
+                            <img alt="image" class="float-left" src="img/about/Locator.png" width="163" height="112">
+                            
+                            <p>
+                               You can locate your Field Staff on the fly,
+							   from your desktop  / laptop or from MobyCRM application 
+							   (only admin. can look at the locations), and you can 
+							   assign the task to cover enroute / re-route as required.
+                            </p>
+
+							<div class="read-more-btn">
+								<a href="img/second5841.swf?width=635&amp;height=383"  data-gal="prettyPhoto[flash]" >View Demo</a>
+								<span class="plus"><i class="icon-facetime-video"></i></span>
+							</div>
+                            
+                        </div><!-- #tab2 content end -->
+
+                        <!-- tab3 content start -->
+                        <div class="tab-content" id="tab3" style="display: none;">
+						 <img alt="image" class="float-left" src="img/about/call-center.png" width="163" height="112">                            
+                            <p>
+                                Your Telemarketing executives can take the calls 
+								on mobiles and the data / information about the 
+								prospective clients and appointments can be set 
+								for corresponding executives, without any delay.
+								and You can maintain the log of the calls made 
+								by the TeleCallers
+                        </p>
+						 <div class="read-more-btn">
+								<a href="img/callcenter5841.swf?width=635&amp;height=383"  data-gal="prettyPhoto[flash]" >View Demo</a>
+								<span class="plus"><i class="icon-facetime-video"></i></span>
+							</div>
+						</div><!-- #tab3 content end -->
+                        
+                        <!-- tab3 content start -->
+                        <div class="tab-content" id="tab4" style="display: none;">
+						 <img alt="image" class="float-left" src="img/about/office.png" width="163" height="112">                           
+                            <p>
+                                Your office staff, who receives the calls (in-bound), can use the application and assign the leads to corresponding executives to follow-up and look at the status of those calls through Daily Call Summary.
+                        </p>
+						 <div class="read-more-btn">
+								<a href="img/office5841.swf?width=635&amp;height=383"  data-gal="prettyPhoto[flash]" >View Demo</a>
+								<span class="plus"><i class="icon-facetime-video"></i></span>
+							</div>
+						</div><!-- #tab3 content end -->
+
+						<!-- tab3 content start -->
+                        <div class="tab-content" id="tab5" style="display: none;">
+						 <img alt="image" class="float-left" src="img/about/application.png" width="163" height="112">                           
+                            <p>
+                                MobyCRM, can you used without Mobile Devices, it greatly improves the productivity of in-house and field staff. Define your goals, and MobyCRM, helps you to realise the optimum RoI of your goals.
+                        </p>
+						 <div class="read-more-btn">
+								<a href="img/callcenter5841.swf?width=635&amp;height=383"  data-gal="prettyPhoto[flash]" >View Demo</a>
+								<span class="plus"><i class="icon-facetime-video"></i></span>
+							</div>
+						</div><!-- #tab3 content end -->
+                    </section><!-- .tabs-content-wrap .vertical end -->
+                </article><!-- .grid_8 end -->
+                
+                <!-- .grid_4 start -->
+                <article class="grid_4" style="margin-top: 20px;">
+                     <!-- .section-title .center start -->
+                    <section class="section-title center">
+
+                        <!-- .ttile-container .carousel start 
+                        <div class="title-container">
+                            <section class="title">
+                                <h2>Our Clients</h2>
+                                <span>What they say about us</span>
+                            </section>-->
+                        <!-- </div>.title-container .carousel end -->                        
+                   <!-- </section> .section-title .center end -->
+                    
+                    <!-- <section class="testimonials-alternative">
+                        <ul class="testimonials-alternative-nav">
+                            <li><a class="active" href="#content-1"><img alt="testimonial 1" src="img/about/testimon-1.jpg"></a></li>
+                            <li><a href="#content-2"><img alt="testimonial 2" src="img/about/testimon-2.jpg"></a></li>
+                            <li><a href="#content-3"><img alt="testimonial 3" src="img/about/testimon-3.jpg"></a></li>
+                            <li><a href="#content-4"><img alt="testimonial 4" src="img/about/testimon-4.jpg"></a></li>
+                        </ul>
+
+                        <section class="testimonials-alternative-content">
+                            <div class="content active" id="content-1">
+                                <p class="text">
+                                    Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem investigationes.
+                                </p>
+                                <p class="author">- Mark Mathewson, info@business.com</p>
+                            </div>
+                            <div class="content" id="content-2">
+                                <p class="text">
+                                    Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.
+                                </p>
+                                <p class="author">- Mark Mathewson, info@business.com</p>
+                            </div>
+                            <div class="content" id="content-3">
+                                <p class="text">
+                                    Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.
+                                </p>
+                                <p class="author">- Mark Mathewson, info@business.com</p>
+                            </div>
+                            <div class="content" id="content-4">
+                                <p class="text">
+                                    Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. 
+                                    Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.
+                                </p>
+                                <p class="author">- Mark Mathewson, info@business.com</p>
+                            </div>
+                        </section> -->
+                    </section>           
+                </article><!-- .grid_4 end -->
+
+            </div><!-- .container_12 end -->
+
+        </section><!-- #content-wrapper end -->
+
+        <div id="load-footer"></div>
+
+        
+        <!-- popup -->
+           
+		    <div class="popup_overlay"></div>
+		    <div id="popContainer" class="popup_content"><a href="javascript:void(0)" class="popup_close">X</a><div id="load_popup_content"></div></div>
+
+        <!-- //popup -->
+
+        <script type="text/javascript">           
+			
+
+            jQuery(document).ready(function() {
+
+
+                jQuery("#load-header").load("inc/header.inc.html");
+                jQuery("#load-footer").load("inc/footer.inc.html");  
+				
+				jQuery(".showPopup").click(function(){
+				   var path = jQuery(this).attr("rel");
+				   var size = jQuery(this).attr("size");
+
+				   if(size=="big") {
+				     jQuery("#popContainer").addClass("big");
+				   } else if(size=="medium") {
+				     jQuery("#popContainer").addClass("medium");
+				   } else {
+				     jQuery("#popContainer").addClass("default");  
+				   }
+
+				   $(".popup_overlay").show();
+				   $("#load_popup_content").load(path);
+				   $("#popContainer").fadeIn().center();
+				   $("body").css("overflow", "hidden")
+
+				});				
+	   
+			    $(".popup_close").click(function(){
+				   $(".popup_overlay").hide();
+				   $("#load_popup_content").empty();
+				   $("#popContainer").hide();	
+				   $("body").css("overflow", "auto")
+			    })
+
+                if (jQuery.fn.cssOriginal !== undefined)   
+                    jQuery.fn.css = jQuery.fn.cssOriginal;
+
+                jQuery('.fullwidthbanner').revolution(
+                        {
+                            delay: 5000,
+                            startheight: 413,
+                            startwidth: 940,
+                            hideThumbs: 200,
+                            thumbWidth: 100,
+                            thumbHeight: 50,
+                            thumbAmount: 5,
+                            navigationType: "none",
+                            navigationArrows: "verticalcentered",
+                            navigationStyle: "round",
+                            navigationHAlign: "right",
+                            navigationVAlign: "top",
+                            navigationHOffset: 0,
+                            navigationVOffset: 20,
+                            soloArrowLeftHalign: "left",
+                            soloArrowLeftValign: "center",
+                            soloArrowLeftHOffset: 20,
+                            soloArrowLeftVOffset: 0,
+                            soloArrowRightHalign: "right",
+                            soloArrowRightValign: "center",
+                            soloArrowRightHOffset: 20,
+                            soloArrowRightVOffset: 0,
+                            touchenabled: "on",
+                            onHoverStop: "on",
+                            navOffsetHorizontal: 0,
+                            navOffsetVertical: 20,
+                            hideCaptionAtLimit: 0,
+                            hideAllCaptionAtLilmit: 0,
+                            hideSliderAtLimit: 0,
+                            stopAtSlide: -1,
+                            stopAfterLoops: -1,
+                            shadow: 0,
+                            fullWidth: "on"
+
+                        });
+            });
+
+            // PORTFOLIO CAROUSEL
+            $("#foo2").carouFredSel({
+                auto: false,
+                scroll: 1,
+                pagination: "#foo2_pag",
+                swipe: {
+                    ontouch: true,
+                    onMouse: true
+                },
+                width: 'variable',
+                height: 'variable',
+                items: {
+                    width: 'auto',
+                    visible: 4
+                }
+            });
+
+            
+            
+            // TESTIMONIALS ALTERNATIVE VERSION
+            $('.testimonials-alternative-nav').on('click', 'a', function(e){
+                e.preventDefault();
+                var $current = $(this);               
+                $('.testimonials-alternative-nav a').removeClass();
+                $('.testimonials-alternative-content .content').hide();
+                $current.addClass('active');
+                var contentID = $current.attr('href');
+                $('.testimonials-alternative-content').find(contentID).fadeIn();
+            });
+
+            /* ]]&gt; */
+        </script>
+    
+</body></html>
